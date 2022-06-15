@@ -5,6 +5,9 @@ using EmployeeManagement.Models;
 
 namespace EmployeeManagement.Services
 {
+    /// <summary>
+    /// Interface that defines controller's business logic
+    /// </summary>
     public interface IEmployeeManagerService
     {
         Task<ServiceResponse<List<GetEmployeeDTO>>> GetAllEmployees();

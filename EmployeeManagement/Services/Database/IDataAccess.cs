@@ -4,6 +4,9 @@ using EmployeeManagement.Models;
 
 namespace EmployeeManagement.Services.Database
 {
+    /// <summary>
+    /// Interface that deals with DB data access
+    /// </summary>
     public interface IDataAccess
     {
         //Get Employee Details

@@ -6,6 +6,9 @@ using System.Linq;
 
 namespace EmployeeManagement.Services.Database
 {
+    /// <summary>
+    /// Implementation of IDataAccess, this is used to perform CRUD operation of SQL server DB
+    /// </summary>
     public class DataAccess : IDataAccess
     {
         private string _conStr;

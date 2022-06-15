@@ -34,7 +34,9 @@ namespace EmployeeManagement
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeeManagement", Version = "v1" });
             });
             services.AddAutoMapper(typeof(Startup));
+            //Registering service
             services.AddScoped<IEmployeeManagerService, EmployeeManagerService>();
+            //Registering DataAccess
             services.AddScoped<IDataAccess, DataAccess>();
         }
 

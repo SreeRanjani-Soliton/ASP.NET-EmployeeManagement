@@ -2,6 +2,9 @@ using EmployeeManagement.Models;
 
 namespace EmployeeManagement.DTOs.Employee
 {
+    /// <summary>
+    /// Data model to update employee details
+    /// </summary>
     public class UpdateEmployeeDTO
     {
         public string Name { get; set; }

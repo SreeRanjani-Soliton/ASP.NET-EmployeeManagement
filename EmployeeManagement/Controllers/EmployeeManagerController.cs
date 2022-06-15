@@ -20,6 +20,10 @@ namespace EmployeeManagement.Controllers
             _employeeService = EmployeeService;
         }
 
+        /// <summary>
+        /// Get details of all employees in database
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllEmployees")]
         public async Task<ActionResult<ServiceResponse<List<GetEmployeeDTO>>>> GetAllEmployeesAsync()
         {
@@ -38,6 +42,11 @@ namespace EmployeeManagement.Controllers
 
         }
 
+        /// <summary>
+        /// Get detail of the employee whoes ID matches the given id
+        /// </summary>
+        /// <param name="id">Employee id to match</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<GetEmployeeDTO>>> GetSingleEmployeeAsync(int id)
         {
@@ -53,6 +62,11 @@ namespace EmployeeManagement.Controllers
             }
         }
 
+        /// <summary>
+        /// Add a new employee to database
+        /// </summary>
+        /// <param name="newEmployee">Detail of the new employee to be added</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<GetEmployeeDTO>>>> AddEmployeeAsync([FromBody] AddEmployeeDTO newEmployee)
         {
@@ -60,6 +74,12 @@ namespace EmployeeManagement.Controllers
 
         }
 
+        /// <summary>
+        /// Update details of employee whoes id matches the given id
+        /// </summary>
+        /// <param name="id">Employee id to match</param>
+        /// <param name="updatedEmployee">Details to update. Currently all details should be provided, if not will be set to default</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<ActionResult<ServiceResponse<GetEmployeeDTO>>> UpdateEmployeeAsync(int id, [FromBody] UpdateEmployeeDTO updatedEmployee)
         {
@@ -75,6 +95,11 @@ namespace EmployeeManagement.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete employee details whoes id matches the given id
+        /// </summary>
+        /// <param name="id">Id of employee to be deleted</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult<ServiceResponse<List<GetEmployeeDTO>>>> DeleteEmployeeAsync(int id)
         {

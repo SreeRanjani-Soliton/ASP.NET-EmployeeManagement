@@ -2,6 +2,9 @@ using EmployeeManagement.Models;
 
 namespace EmployeeManagement.DTOs.Employee
 {
+    /// <summary>
+    /// Data Model to add employee details
+    /// </summary>
     public class AddEmployeeDTO
     {
         public string Name { get; set; }

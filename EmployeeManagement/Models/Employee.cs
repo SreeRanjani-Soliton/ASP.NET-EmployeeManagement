@@ -1,5 +1,8 @@
 namespace EmployeeManagement.Models
 {
+    /// <summary>
+    /// Core employee class
+    /// </summary>
     public class Employee
     {
         public int Id { get; set; }

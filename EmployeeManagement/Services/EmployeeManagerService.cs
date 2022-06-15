@@ -10,6 +10,9 @@ using EmployeeManagement.Services.Database;
 
 namespace EmployeeManagement.Services
 {
+    /// <summary>
+    /// Class that implements controller's business logic
+    /// </summary>
     public class EmployeeManagerService : IEmployeeManagerService
     {
         private List<Employee> _employees = new List<Employee>();
