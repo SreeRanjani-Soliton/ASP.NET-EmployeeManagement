@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
 
 namespace EmployeeManagement.Services.Database
 {
@@ -12,9 +13,10 @@ namespace EmployeeManagement.Services.Database
     public class DataAccess : IDataAccess
     {
         private string _conStr;
-        public DataAccess()
+        public DataAccess(IConfiguration configuration)
         {
-            _conStr = "data source=CBE-HPLT-446\\SQLEXPRESS;database = EmployeeDetails;integrated security=true";
+            _conStr = configuration.GetConnectionString("DefaultDBConnection");
+            //_conStr = "data source=CBE-HPLT-446\\SQLEXPRESS;database = EmployeeDetails;integrated security=true";
         }
         public DataTable GetAllData(string tableName)
         {

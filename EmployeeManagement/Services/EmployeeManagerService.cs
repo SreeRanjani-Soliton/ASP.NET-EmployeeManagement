@@ -37,7 +37,6 @@ namespace EmployeeManagement.Services
             // };
             _mapper = mapper;
             _dataAccess = dataAccess;
-
         }
 
         public async Task<ServiceResponse<List<GetEmployeeDTO>>> GetAllEmployees()
